@@ -27,7 +27,7 @@ if __name__ == "__main__":
 
     print(args)
 
-    csv.field_size_limit(sys.maxsize)
+    csv.field_size_limit(min(sys.maxsize, 2147483646))
 
     # load vocab and other lookups
     print("loading lookups...")
